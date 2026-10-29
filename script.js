@@ -17,13 +17,14 @@
 
 // STEP 1: Create a new Date object using: let now = new Date();
 
-let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday",];
+let days = ["Sunday","Monday","Tuesday","Wednesday", "Thursday","Friday","Saturday",];
 let today = new Date();
+document.getElementById("warmUpDate").textContent = days[today.getDay()];
 
 // STEP 2: Use .getDay() to get the day of the week as a number.
 //         Sunday = 0, Monday = 1, Tuesday = 2, ... Saturday = 6
 
-document.getElementById["warmUpDate"].textContent = days [today.getDay()];
+
 
 // STEP 3: Create an array of day names:
 //         let days = ["Sunday", "Monday", "Tuesday", "Wednesday",
@@ -45,7 +46,7 @@ document.getElementById["warmUpDate"].textContent = days [today.getDay()];
 
 // STEP 6: Create a new Date object (or reuse the one from above).
 
-let month = today.getMonth() +1;
+let month = today.getMonth() + 1;
 
 // STEP 7: Get the month using .getMonth()
 //         IMPORTANT: .getMonth() returns 0–11 (January = 0)
@@ -114,7 +115,7 @@ document.getElementById("myBtn").addEventListener("click", function(){
         btn.textContent = "Start";
     }
     else{
-        startTime - Date.now() - elapsed * 1000;
+        startTime = Date.now();
         timerInterval = setInterval(function(){
             elapsed = (Date.now() - startTime) / 1000;
             document.getElementById("myTimer").textContent = elapsed.toFixed(3);
@@ -122,7 +123,7 @@ document.getElementById("myBtn").addEventListener("click", function(){
         running = true;
         btn.textContent = "Stop";
     }
-})
+});
 
 // STEP 14: Add a click event listener to the button (ID "myBtn").
 //          Inside the listener:
